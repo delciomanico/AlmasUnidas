@@ -2,7 +2,6 @@
 'use client';
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FiInstagram, FiFacebook, FiTwitter, FiMail, FiPhone } from "react-icons/fi";
 
 interface Testimonial {
   quote: string;
@@ -59,7 +58,7 @@ export default function Testimonials() {
             >
               <div className="bg-white p-8 rounded-xl shadow-md">
                 <blockquote className="text-xl italic text-[#3A3226] mb-6">
-                  "{testimonial.quote}"
+                  `{testimonial.quote}`
                 </blockquote>
                 <div className="text-right">
                   <p className="font-semibold text-[#a80e0e]">{testimonial.author}</p>

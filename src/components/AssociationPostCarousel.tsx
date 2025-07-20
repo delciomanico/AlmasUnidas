@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { FiHeart, FiMessageSquare, FiShare2 } from 'react-icons/fi';
+import Image from 'next/image';
 
 interface AssociationPost {
   id: number;
@@ -105,9 +106,12 @@ export default function AssociationPostsCarousel() {
                   className="bg-white rounded-xl overflow-hidden shadow-lg"
                 >
                   <div className="relative h-64">
-                    <img 
+              
+                    <Image 
                       src={post.imageUrl} 
                       alt={post.caption} 
+                      width={'1000'}
+                      height={'1000'}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">

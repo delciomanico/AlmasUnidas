@@ -2,7 +2,6 @@
 'use client';
 import { motion } from "framer-motion";
 import CountUp from 'react-countup';
-import { ReactElement } from 'react';
 
 interface StatItem {
   value: number;

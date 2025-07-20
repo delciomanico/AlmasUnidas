@@ -2,7 +2,6 @@
 'use client';
 import { motion, useTransform, useScroll, MotionValue } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 
 function useParallax(value: MotionValue<number>, distance: number) {

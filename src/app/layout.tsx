@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { domAnimation, LazyMotion } from "framer-motion";
-import Layout from "@/components/Layout";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,14 +25,8 @@ export default function RootLayout({
 }>) {
   return (
 <html>
-  <body>
-  
-    <LazyMotion features={domAnimation}>
-      <Layout>
-
+  <body className={`${geistMono} ${geistSans} `}>
         {children}
-      </Layout>
-      </LazyMotion>
   </body>
 </html>
     );

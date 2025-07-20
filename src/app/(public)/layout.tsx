@@ -1,17 +1,18 @@
-// pages/_app.tsx
-import type { AppProps } from 'next/app';
+'use client'
 import { LazyMotion, domAnimation } from "framer-motion";
 import Layout from "@/components/Layout";
-import "../globals.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>){
   return (
     <LazyMotion features={domAnimation}>
       <Layout>
-        <Component {...pageProps} />
+        {children}
       </Layout>
     </LazyMotion>
   );
 }
-
 export default MyApp;
